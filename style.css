@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: #f6f8ff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 730px;
+  width: 100%;
+}
+.header {
+  max-width: 730px;
+  width: 100%;
+  height: 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerh1 {
+  color: #222731;
+  font-family: "Space Mono", monospace;
+  font-size: 26px;
+  font-weight: 700;
+}
+.headerdiv {
+  display: flex;
+  gap: 18px;
+}
+.headerdivp {
+  color: #697c9a;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+.searchicon {
+  width: 24.058px;
+  height: 24px;
+  margin-left: 32px;
+}
+.searchdiv {
+  max-width: 730px;
+  width: 100%;
+  background-color: white;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  margin-top: 36px;
+}
+.search {
+  width: 257px;
+  height: 25px;
+  margin-left: 24px;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  border: none;
+  color: #222731;
+}
+.search::placeholder {
+  color: #4b6a9b;
+  width: 454px;
+}
+.form {
+  display: flex;
+  align-items: center;
+}
+.button {
+  width: 106px;
+  height: 50px;
+  border-radius: 10px;
+  background: #0079ff;
+  color: #fff;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  margin-left: 280px;
+}
+.maindiv {
+  max-width: 730px;
+  width: 100%;
+  background-color: white;
+  height: 444px;
+  border-radius: 15px;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  margin-top: 24px;
+  display: flex;
+}
+.profilepic {
+  border-radius: 50%;
+  margin-top: 48px;
+  margin-left: 48px;
+  width: 117px;
+  height: 117px;
+}
+.informationdiv {
+  margin-left: 37px;
+  max-width: 480px;
+  width: 100%;
+  height: 327px;
+  margin-top: 44px;
+}
+.name {
+  color: #2b3442;
+  font-family: "Space Mono";
+  font-size: 26px;
+  font-weight: 700;
+}
+.informationfirstline {
+  display: flex;
+  align-items: center;
+}
+.date {
+  color: #697c9a;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 138px;
+}
+.username {
+  color: #0079ff;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-weight: 400;
+}
+.bio {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 20px;
+}
+.followersdiv {
+  max-width: 480px;
+  width: 100%;
+  height: 85px;
+  border-radius: 10px;
+  background: #f6f8ff;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+.repos {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 13px;
+  font-weight: 400;
+}
+.reposnumber {
+  color: #2b3442;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.reposdiv {
+  margin-left: 32px;
+}
+.followerdiv {
+  margin-left: 99px;
+}
+.followingdiv {
+  margin-left: 82px;
+}
+.locationdiv {
+  display: flex;
+}
+.blogdiv {
+  display: flex;
+}
+.locationandblog {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.location {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 19px;
+}
+.blog {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 16px;
+}
+.iconsdiv {
+  display: flex;
+}
+.twitterdiv {
+  display: flex;
+}
+.twitterico {
+  opacity: 0.5;
+}
+.twitter {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 16px;
+  opacity: 0.5;
+}
+.building {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 16px;
+}
+.buildingdiv {
+  display: flex;
+}
+.twitterandhub {
+  margin-top: 37px;
+  margin-left: 62px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.headericonhover {
+  display: none;
+}
+@media (max-width: 800px) {
+  .header {
+    max-width: 573px;
+    width: 100%;
+  }
+  .container {
+    max-width: 573px;
+    width: 100%;
+  }
+  .searchdiv {
+    max-width: 573px;
+    width: 100%;
+  }
+  .button {
+    margin-left: 123px;
+  }
+  .maindiv {
+    max-width: 573px;
+    width: 100%;
+    height: 481px;
+  }
+  .informationfirstline {
+    position: relative;
+  }
+  .date {
+    position: absolute;
+    left: -139px;
+    top: 69px;
+  }
+  .maindiv {
+    position: relative;
+  }
+  .bio {
+    width: 493px;
+    position: absolute;
+    left: 40px;
+    top: 161px;
+  }
+  .profilepic {
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+  .followersdiv {
+    width: 493px;
+    position: absolute;
+    left: 40px;
+    top: 231px;
+  }
+  .iconsdiv {
+    position: absolute;
+    top: 341px;
+    left: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    max-width: 327px;
+    width: 100%;
+  }
+  .container {
+    max-width: 327px;
+    width: 100%;
+  }
+  .searchdiv {
+    max-width: 327px;
+    width: 100%;
+    height: 60px;
+  }
+  .searchicon {
+    margin-left: 16px;
+  }
+  .search {
+    width: 184px;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+  .button {
+    margin-left: 7px;
+    width: 84px;
+    height: 46px;
+    font-size: 14px;
+  }
+  .profilepic {
+    width: 70px;
+    height: 70px;
+    margin-top: 32px;
+    margin-left: 24px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .informationdiv {
+    margin-top: 33px;
+  }
+  .username {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+  .maindiv {
+    margin-top: 16px;
+    height: 517px;
+  }
+  .date {
+    top: 49px;
+    font-size: 13px;
+  }
+  .bio {
+    width: 279px;
+    left: 24px;
+    top: 115px;
+    font-size: 13px;
+  }
+  .followersdiv {
+    width: 279px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    left: 24px;
+    top: 196px;
+  }
+  .reposdiv {
+    margin-left: 0px;
+  }
+  .followerdiv {
+    margin-left: 0px;
+  }
+  .followingdiv {
+    margin-left: 0px;
+  }
+  .reposdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .followingdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .followerdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .repos {
+    font-size: 11px;
+  }
+  .reposnumber {
+    font-size: 16px;
+  }
+  .iconsdiv {
+    flex-direction: column;
+    left: 24px;
+  }
+  .locationandblog {
+    margin-top: -13px;
+    gap: 17px;
+  }
+  .twitterandhub {
+    margin-top: 0px;
+    margin-left: 0px;
+    gap: 17px;
+    margin-top: 17px;
+  }
+  .location {
+    font-size: 13px;
+  }
+  .twitter {
+    font-size: 13px;
+    margin-left: 13px;
+  }
+  .building {
+    font-size: 13px;
+    margin-left: 13px;
+  }
+  .blog {
+    font-size: 13px;
+    margin-left: 13px;
+  }
+}
