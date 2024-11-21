@@ -3,8 +3,15 @@
   box-sizing: border-box;
   margin: 0;
 }
-body {
+.body {
   background: #f6f8ff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.darkbody {
+  background: #141d2f;
   display: flex;
   height: 100vh;
   align-items: center;
@@ -13,6 +20,12 @@ body {
 .container {
   max-width: 730px;
   width: 100%;
+}
+.darkhoversun {
+  position: absolute;
+  left: 74px;
+  opacity: 0;
+  z-index: -100;
 }
 .header {
   max-width: 730px;
@@ -28,16 +41,68 @@ body {
   font-size: 26px;
   font-weight: 700;
 }
-.headerdiv {
-  display: flex;
-  gap: 18px;
+.darkheaderh1 {
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-size: 26px;
+  font-weight: 700;
 }
-.headerdivp {
+.modebutton {
   color: #697c9a;
+  text-align: right;
   font-family: "Space Mono", monospace;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2.5px;
+  border: none;
+  background: #f6f8ff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+}
+.modebutton1 {
+  color: #697c9a;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  border: none;
+  background: #f6f8ff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+}
+.darkmodebutton {
+  position: absolute;
+  color: white;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  border: none;
+  background: #141d2f;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+  top: -10px;
+  left: -101px;
+}
+.headerdiv {
+  position: relative;
+}
+.modeiconhover {
+  position: absolute;
+  left: 64px;
+  opacity: 0;
 }
 .searchicon {
   width: 24.058px;
@@ -56,6 +121,17 @@ body {
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   margin-top: 36px;
 }
+.darksearchdiv {
+  max-width: 730px;
+  width: 100%;
+  background-color: white;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background: #1e2a47;
+  margin-top: 36px;
+}
 .search {
   width: 257px;
   height: 25px;
@@ -66,6 +142,24 @@ body {
   line-height: 25px;
   border: none;
   color: #222731;
+}
+.darksearch {
+  width: 257px;
+  height: 25px;
+  margin-left: 24px;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  border: none;
+  color: #fff;
+  background: #1e2a47;
+}
+.search:focus {
+  outline: none;
+}
+.darksearch:focus {
+  outline: none;
 }
 .search::placeholder {
   color: #4b6a9b;
@@ -86,6 +180,8 @@ body {
   font-weight: 700;
   border: none;
   margin-left: 280px;
+  cursor: pointer;
+  transition: 1.5s;
 }
 .maindiv {
   max-width: 730px;
@@ -95,6 +191,16 @@ body {
   border-radius: 15px;
   background: #fefefe;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  margin-top: 24px;
+  display: flex;
+}
+.darkmaindiv {
+  max-width: 730px;
+  width: 100%;
+  background-color: white;
+  height: 444px;
+  border-radius: 15px;
+  background: #1e2a47;
   margin-top: 24px;
   display: flex;
 }
@@ -118,12 +224,26 @@ body {
   font-size: 26px;
   font-weight: 700;
 }
+.darkname {
+  color: white;
+  font-family: "Space Mono";
+  font-size: 26px;
+  font-weight: 700;
+}
 .informationfirstline {
   display: flex;
   align-items: center;
 }
 .date {
   color: #697c9a;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 138px;
+}
+.darkdate {
+  color: white;
   text-align: right;
   font-family: "Space Mono";
   font-size: 15px;
@@ -144,6 +264,14 @@ body {
   line-height: 25px;
   margin-top: 20px;
 }
+.darkbio {
+  color: white;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 20px;
+}
 .followersdiv {
   max-width: 480px;
   width: 100%;
@@ -154,14 +282,37 @@ body {
   display: flex;
   align-items: center;
 }
+.darkfollowersdiv {
+  background: #141d2f;
+  max-width: 480px;
+  width: 100%;
+  height: 85px;
+  border-radius: 10px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
 .repos {
   color: #4b6a9b;
   font-family: "Space Mono";
   font-size: 13px;
   font-weight: 400;
 }
+.darkrepos {
+  color: white;
+  font-family: "Space Mono";
+  font-size: 13px;
+  font-weight: 400;
+}
 .reposnumber {
   color: #2b3442;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.darkreposnumber {
+  color: white;
   font-family: "Space Mono";
   font-size: 22px;
   font-weight: 700;
@@ -178,9 +329,11 @@ body {
 }
 .locationdiv {
   display: flex;
+  position: relative;
 }
 .blogdiv {
   display: flex;
+  position: relative;
 }
 .locationandblog {
   margin-top: 37px;
@@ -188,8 +341,27 @@ body {
   flex-direction: column;
   gap: 19px;
 }
+.darklocationicon {
+  position: absolute;
+  opacity: 0;
+}
+.darkbuildingicon {
+  position: absolute;
+  opacity: 0;
+}
+.darkblogicon {
+  position: absolute;
+  opacity: 0;
+}
 .location {
   color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 19px;
+}
+.darklocation {
+  color: white;
   font-family: "Space Mono";
   font-size: 15px;
   font-weight: 400;
@@ -201,6 +373,21 @@ body {
   font-size: 15px;
   font-weight: 400;
   margin-left: 16px;
+  text-decoration: none;
+}
+.darkblog {
+  color: white;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 16px;
+  text-decoration: none;
+}
+.blog:hover {
+  text-decoration: underline;
+}
+.darkblog:hover {
+  text-decoration: underline;
 }
 .iconsdiv {
   display: flex;
@@ -226,8 +413,16 @@ body {
   font-weight: 400;
   margin-left: 16px;
 }
+.darkbuilding {
+  color: white;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 16px;
+}
 .buildingdiv {
   display: flex;
+  position: relative;
 }
 .twitterandhub {
   margin-top: 37px;
@@ -235,9 +430,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 19px;
-}
-.headericonhover {
-  display: none;
 }
 @media (max-width: 800px) {
   .header {
@@ -252,6 +444,10 @@ body {
     max-width: 573px;
     width: 100%;
   }
+  .darksearchdiv {
+    max-width: 573px;
+    width: 100%;
+  }
   .button {
     margin-left: 123px;
   }
@@ -259,6 +455,13 @@ body {
     max-width: 573px;
     width: 100%;
     height: 481px;
+    position: relative;
+  }
+  .darkmaindiv {
+    max-width: 573px;
+    width: 100%;
+    height: 481px;
+    position: relative;
   }
   .informationfirstline {
     position: relative;
@@ -268,10 +471,18 @@ body {
     left: -139px;
     top: 69px;
   }
-  .maindiv {
-    position: relative;
+  .darkdate {
+    position: absolute;
+    left: -139px;
+    top: 69px;
   }
   .bio {
+    width: 493px;
+    position: absolute;
+    left: 40px;
+    top: 161px;
+  }
+  .darkbio {
     width: 493px;
     position: absolute;
     left: 40px;
@@ -282,6 +493,12 @@ body {
     margin-top: 40px;
   }
   .followersdiv {
+    width: 493px;
+    position: absolute;
+    left: 40px;
+    top: 231px;
+  }
+  .darkfollowersdiv {
     width: 493px;
     position: absolute;
     left: 40px;
@@ -307,10 +524,20 @@ body {
     width: 100%;
     height: 60px;
   }
+  .darksearchdiv {
+    max-width: 327px;
+    width: 100%;
+    height: 60px;
+  }
   .searchicon {
     margin-left: 16px;
   }
   .search {
+    width: 184px;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+  .darksearch {
     width: 184px;
     font-size: 13px;
     margin-left: 8px;
@@ -330,6 +557,9 @@ body {
   .name {
     font-size: 16px;
   }
+  .darkname {
+    font-size: 16px;
+  }
   .informationdiv {
     margin-top: 33px;
   }
@@ -341,7 +571,15 @@ body {
     margin-top: 16px;
     height: 517px;
   }
+  .darkmaindiv {
+    margin-top: 16px;
+    height: 517px;
+  }
   .date {
+    top: 49px;
+    font-size: 13px;
+  }
+  .darkdate {
     top: 49px;
     font-size: 13px;
   }
@@ -351,7 +589,21 @@ body {
     top: 115px;
     font-size: 13px;
   }
+  .darkbio {
+    width: 279px;
+    left: 24px;
+    top: 115px;
+    font-size: 13px;
+  }
   .followersdiv {
+    width: 279px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    left: 24px;
+    top: 196px;
+  }
+  .darkfollowersdiv {
     width: 279px;
     display: flex;
     align-items: center;
@@ -374,6 +626,12 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .darkreposdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .followingdiv {
     display: flex;
     flex-direction: column;
@@ -389,12 +647,19 @@ body {
   .repos {
     font-size: 11px;
   }
+  .darkrepos {
+    font-size: 11px;
+  }
   .reposnumber {
+    font-size: 16px;
+  }
+  .darkreposnumber {
     font-size: 16px;
   }
   .iconsdiv {
     flex-direction: column;
     left: 24px;
+    top: 352px;
   }
   .locationandblog {
     margin-top: -13px;
@@ -409,6 +674,9 @@ body {
   .location {
     font-size: 13px;
   }
+  .darklocation {
+    font-size: 13px;
+  }
   .twitter {
     font-size: 13px;
     margin-left: 13px;
@@ -417,7 +685,15 @@ body {
     font-size: 13px;
     margin-left: 13px;
   }
+  .darkbuilding {
+    font-size: 13px;
+    margin-left: 13px;
+  }
   .blog {
+    font-size: 13px;
+    margin-left: 13px;
+  }
+  .darkblog {
     font-size: 13px;
     margin-left: 13px;
   }

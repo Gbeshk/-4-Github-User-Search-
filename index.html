@@ -6,20 +6,47 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
-    <div class="container">
+  <body class="body" id="lightbody">
+    <div class="container" id="conteiner">
       <header>
         <div class="header">
-          <h1 class="headerh1">devfinder</h1>
+          <h1 id="headerH1" class="headerh1">devfinder</h1>
           <div class="headerdiv">
-            <p class="headerdivp">DARK</p>
-            <img class="headericon" src="./images/moon.svg" alt="" />
-            <img class="headericonhover" src="./images/moon.png" alt="" />
+            <button class="modebutton" id="modebtn">
+              DARK
+              <img
+                class="modeicon"
+                id="modeic"
+                src="./images/moon.svg"
+                alt=""
+              />
+              <img
+                class="modeiconhover"
+                id="modeichover"
+                src="./images/moon.png"
+                alt=""
+              />
+            </button>
+            <button class="darkmodebutton" id="darkbutton">
+              LIGHT
+              <img
+                id="icon11"
+                class="darksun"
+                src="./images/002-sun.svg"
+                alt=""
+              />
+              <img
+                id="icon12"
+                class="darkhoversun"
+                src="./images/002-sun (1).svg"
+                alt=""
+              />
+            </button>
           </div>
         </div>
       </header>
       <section>
-        <div class="searchdiv">
+        <div class="searchdiv" id="lightsearchdiv">
           <img
             class="searchicon"
             src="./images/Shape 2.png"
@@ -28,50 +55,65 @@
           />
           <form class="form">
             <input
+              id="input"
               class="search"
               type="input"
               placeholder="Search GitHub username…"
             />
-            <button class="button">Search</button>
+            <button class="button" id="searchbutton">Search</button>
           </form>
         </div>
       </section>
       <section>
-        <div class="maindiv">
+        <div class="maindiv" id="lightmaindiv">
           <img class="profilepic" src="./images/Bitmap (16).png" alt="" />
           <div class="informationdiv">
             <div class="informationfirstline">
-              <h1 class="name">The Octocat</h1>
-              <p class="date">Joined 25 Jan 2011</p>
+              <h1 class="name" id="user">The Octocat</h1>
+              <p class="date" id="datee">Joined 25 Jan 2011</p>
             </div>
             <p class="username">@octocat</p>
-            <p class="bio">
+            <p class="bio" id="biio">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
               odio. Quisque volutpat mattis eros.
             </p>
-            <div class="followersdiv">
+            <div class="followersdiv" id="divfollowers">
               <div class="reposdiv">
-                <p class="repos">Repos</p>
-                <p class="reposnumber">8</p>
+                <p class="repos" id="repo">Repos</p>
+                <p class="reposnumber" id="numberrepos">8</p>
               </div>
               <div class="followerdiv">
-                <p class="repos">Followers</p>
-                <p class="reposnumber">3938</p>
+                <p class="repos" id="followers">Followers</p>
+                <p class="reposnumber" id="followersnumber">3938</p>
               </div>
               <div class="followingdiv">
-                <p class="repos">Following</p>
-                <p class="reposnumber">9</p>
+                <p class="repos" id="following">Following</p>
+                <p class="reposnumber" id="followingnumber">9</p>
               </div>
             </div>
             <div class="iconsdiv">
               <div class="locationandblog">
                 <div class="locationdiv">
                   <img class="locationicon" src="./images/003-pin.svg" alt="" />
-                  <p class="location">San Francisco</p>
+                  <img
+                    id="locationicondark"
+                    class="darklocationicon"
+                    src="./images/003-pin.png"
+                    alt=""
+                  />
+                  <p class="location" id="locationn">San Francisco</p>
                 </div>
                 <div class="blogdiv">
                   <img class="blogicon" src="./images/002-url.svg" alt="" />
-                  <p class="blog">https://github.blog</p>
+                  <img
+                    class="darkblogicon"
+                    id="blogicondark"
+                    src="./images/002-url (1).svg"
+                    alt=""
+                  />
+                  <a class="blog" id="blogg" href="https://github.blog"
+                    >https://github.blog</a
+                  >
                 </div>
               </div>
               <div class="twitterandhub">
@@ -85,11 +127,17 @@
                 </div>
                 <div class="buildingdiv">
                   <img
+                    id="buildingicondark"
+                    class="darkbuildingicon"
+                    src="./images/001-office-building (1).svg"
+                    alt=""
+                  />
+                  <img
                     class="buildingicon"
                     src="./images/001-office-building.svg"
                     alt=""
                   />
-                  <p class="building">@github</p>
+                  <p class="building" id="build">@github</p>
                 </div>
               </div>
             </div>
