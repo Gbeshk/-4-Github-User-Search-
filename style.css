@@ -161,8 +161,12 @@
 .darksearch:focus {
   outline: none;
 }
-.search::placeholder {
+.search::placeholder{
   color: #4b6a9b;
+  width: 454px;
+}
+.darksearch::placeholder {
+  color: white;
   width: 454px;
 }
 .form {

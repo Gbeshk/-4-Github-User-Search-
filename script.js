@@ -52,6 +52,9 @@ let blogg = document.getElementById("blogg");
 let build = document.getElementById("build");
 
 let x = 0;
+if (localStorage.getItem("task") % 2 == 1) {
+  x++;
+}
 btn.addEventListener("click", () => {
   x++;
   localStorage.setItem("task", x);
@@ -113,32 +116,32 @@ darkbtn.addEventListener("click", () => {
 });
 
 let y = localStorage.getItem("task");
-
 if (y % 2 == 0) {
-  boddy.className = "darkbody";
-  headerh1.className = "darkheaderh1";
-  darkbtn.style.opacity = 1;
-  darkbtn.style.zIndex = 1;
-  btn.style.display = "none";
-  searchdiv.className = "darksearchdiv";
-  search.className = "darksearch";
-  maindiv.className = "darkmaindiv";
-  name.className = "darkname";
-  date.className = "darkdate";
-  bio.className = "darkbio";
-  followersdiv.className = "darkfollowersdiv";
-  repos.className = "darkrepos";
-  reposnumber.className = "darkreposnumber";
-  followers.className = "darkrepos";
-  followersnumber.className = "darkreposnumber";
-  following.className = "darkrepos";
-  followingnumber.className = "darkreposnumber";
-  locationicon.style.opacity = 1;
-  blogicon.style.opacity = 1;
-  buildingicon.style.opacity = 1;
-  locationn.className = "darklocation";
-  blogg.className = "darkblog";
-  build.className = "darkbuilding";
+  boddy.className = "body";
+  headerh1.className = "headerh1";
+  darkbtn.style.opacity = 0;
+  darkbtn.style.zIndex = -1;
+  darkbtn.style.transition = "none";
+  btn.style.display = "flex";
+  searchdiv.className = "searchdiv";
+  search.className = "search";
+  maindiv.className = "maindiv";
+  name.className = "name";
+  date.className = "date";
+  bio.className = "bio";
+  followersdiv.className = "followersdiv";
+  repos.className = "repos";
+  reposnumber.className = "reposnumber";
+  followers.className = "repos";
+  followersnumber.className = "reposnumber";
+  following.className = "repos";
+  followingnumber.className = "reposnumber";
+  locationicon.style.opacity = 0;
+  blogicon.style.opacity = 0;
+  buildingicon.style.opacity = 0;
+  locationn.className = "location";
+  blogg.className = "blog";
+  build.className = "building";
 }
 if (y % 2 == 1) {
   boddy.className = "darkbody";
@@ -166,7 +169,6 @@ if (y % 2 == 1) {
   blogg.className = "darkblog";
   build.className = "darkbuilding";
 }
-
 darkbtn.addEventListener("mouseover", () => {
   darkbtn.style.color = "#90A4D4";
   darkbtn.style.transition = "1.5s";
@@ -183,4 +185,3 @@ darkbtn.addEventListener("mouseleave", () => {
   icon11.style.transition = "1.5s";
   icon12.style.transition = "1.5s";
 });
-console.log(y);
