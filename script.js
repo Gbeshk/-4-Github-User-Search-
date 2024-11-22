@@ -50,6 +50,8 @@ let buildingicon = document.getElementById("buildingicondark");
 let locationn = document.getElementById("locationn");
 let blogg = document.getElementById("blogg");
 let build = document.getElementById("build");
+let twitter = document.getElementById("twitter1");
+let twittericon = document.getElementById("darktwittericon1");
 
 let x = 0;
 if (localStorage.getItem("task") % 2 == 1) {
@@ -184,4 +186,78 @@ darkbtn.addEventListener("mouseleave", () => {
   icon12.style.opacity = 0;
   icon11.style.transition = "1.5s";
   icon12.style.transition = "1.5s";
+});
+
+let form = document.getElementById("forma");
+let serch = document.getElementById("search");
+
+function fun(a, b) {}
+
+form.addEventListener("submit", (e) => {
+  async function getAllProducts() {
+    e.preventDefault();
+    try {
+      let data = await fetch(`https://api.github.com/users/${input.value}`);
+      let ouruser = await data.json();
+      console.log(ouruser);
+      let name1 = document.getElementById("user");
+      name1.textContent = ouruser.name;
+      let username1 = document.getElementById("nameuser");
+      username1.textContent = `@${ouruser.login}`;
+      let date1 = document.getElementById("datee");
+      // datee1.textContent = `joined ${ouruser.login[8]${ouruser.login[9]}}`
+      let following1 = document.getElementById("followingnumber");
+      following1.textContent = ouruser.following;
+      let followers1 = document.getElementById("followersnumber");
+      followers1.textContent = ouruser.followers;
+      let location1 = document.getElementById("locationn");
+      location1.textContent = ouruser.location;
+      if (
+        ouruser.location == null ||
+        ouruser.location == undefined ||
+        ouruser.location.length < 1
+      ) {
+        location1.textContent = "Not Avaliable";
+        location1.style.opacity = 0.5;
+        let iconlocation = document.getElementById("iconlocation");
+        iconlocation.textContent = "Not Avaliable";
+        iconlocation.style.opacity = 0.5;
+      }
+      let repos1 = document.getElementById("numberrepos");
+      repos1.textContent = ouruser.public_repos;
+      let blog1 = document.getElementById("blogg");
+      blog1.textContent = ouruser.blog;
+      if (
+        ouruser.blog == null ||
+        ouruser.blog == undefined ||
+        ouruser.blog.length < 1
+      ) {
+        blog1.textContent = "Not Avaliable";
+        blog1.style.opacity = 0.5;
+        let iconblog = document.getElementById("iconblog");
+        iconblog.textContent = "Not Avaliable";
+        iconblog.style.opacity = 0.5;
+      }
+      let bio1 = document.getElementById("biio");
+      if (ouruser.bio != null) {
+        bio1.textContent = ouruser.bio;
+      }
+      let company = document.getElementById("build");
+      if (ouruser.company.length > 40) {
+        company.style.fontSize = "12px";
+      }
+      company.textContent = ouruser.company;
+      if (ouruser.twitter_username.length) {
+        let twitter1 = document.getElementById("twitter1");
+        twitter1.style.opacity = 1;
+        let icontwitter = document.getElementById("icontwitter");
+        icontwitter.style.opacity = 1;
+        twitter1.textContent = ouruser.twitter_username;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    input.value = " ";
+  }
+  getAllProducts();
 });

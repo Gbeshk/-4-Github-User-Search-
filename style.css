@@ -9,6 +9,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 .darkbody {
   background: #141d2f;
@@ -16,6 +17,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 .container {
   max-width: 730px;
@@ -161,7 +163,7 @@
 .darksearch:focus {
   outline: none;
 }
-.search::placeholder{
+.search::placeholder {
   color: #4b6a9b;
   width: 454px;
 }
@@ -227,12 +229,14 @@
   font-family: "Space Mono";
   font-size: 26px;
   font-weight: 700;
+  width: 1000px;
 }
 .darkname {
   color: white;
   font-family: "Space Mono";
   font-size: 26px;
   font-weight: 700;
+  width: 1000px;
 }
 .informationfirstline {
   display: flex;
@@ -244,7 +248,7 @@
   font-family: "Space Mono";
   font-size: 15px;
   font-weight: 400;
-  margin-left: 138px;
+  width: 600px;
 }
 .darkdate {
   color: white;
@@ -252,7 +256,7 @@
   font-family: "Space Mono";
   font-size: 15px;
   font-weight: 400;
-  margin-left: 138px;
+  width: 600px;
 }
 .username {
   color: #0079ff;
@@ -338,6 +342,8 @@
 .blogdiv {
   display: flex;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .locationandblog {
   margin-top: 37px;
@@ -398,12 +404,21 @@
 }
 .twitterdiv {
   display: flex;
+  position: relative;
 }
-.twitterico {
+.twittericon {
   opacity: 0.5;
 }
 .twitter {
   color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 16px;
+  opacity: 0.5;
+}
+.darktwitter {
+  color: white;
   font-family: "Space Mono";
   font-size: 15px;
   font-weight: 400;
@@ -423,10 +438,14 @@
   font-size: 15px;
   font-weight: 400;
   margin-left: 16px;
+  display: flex;
+  align-items: center;
 }
 .buildingdiv {
   display: flex;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .twitterandhub {
   margin-top: 37px;
@@ -434,6 +453,11 @@
   display: flex;
   flex-direction: column;
   gap: 19px;
+}
+.darktwittericon {
+  position: absolute;
+  top: 2px;
+  display: none;
 }
 @media (max-width: 800px) {
   .header {
@@ -474,11 +498,15 @@
     position: absolute;
     left: -139px;
     top: 69px;
+    width: auto;
+    left: 0px;
   }
   .darkdate {
     position: absolute;
     left: -139px;
     top: 69px;
+    width: auto;
+    left: 0px;
   }
   .bio {
     width: 493px;
@@ -582,10 +610,14 @@
   .date {
     top: 49px;
     font-size: 13px;
+    left: 0px;
+    width: auto;
   }
   .darkdate {
     top: 49px;
     font-size: 13px;
+    left: 0px;
+    width: auto;
   }
   .bio {
     width: 279px;
