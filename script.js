@@ -77,7 +77,6 @@ form.addEventListener("submit", (e) => {
         searchdiv.appendChild(errorp);
       } else {
         let ouruser = await data.json();
-        console.log(ouruser);
         let img = document.getElementById("pic");
         img.src = ouruser.avatar_url;
         let userdate = new Date(ouruser.created_at);
