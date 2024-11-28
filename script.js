@@ -145,6 +145,9 @@ form.addEventListener("submit", (e) => {
             darkcompanyicon.style.opacity = 0.5;
           }
         }
+        if (company1.textContent.length > 26) {
+          company1.textContent = company1.textContent.slice(0, 26);
+        }
         if (ouruser.blog) {
           blogg.textContent = ouruser.blog;
           blogg.style.opacity = 1;
@@ -168,13 +171,8 @@ form.addEventListener("submit", (e) => {
           bio1.textContent =
             "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
         }
-        if (bio1.textContent.length > 100) {
-          bio1.style.fontSize = "13px";
-        } else {
-          bio1.style.fontSize = "15px";
-        }
-        if (company1.style.fontWeight == 111) {
-          company1.style.fontSize = "13px";
+        if (bio1.textContent.length > 110) {
+          bio1.textContent = bio1.textContent.slice(0, 110);
         }
         if (ouruser.blog && ouruser.blog.length > 0) {
           blogg.textContent = ouruser.blog;
